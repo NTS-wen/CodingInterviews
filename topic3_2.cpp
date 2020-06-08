@@ -40,7 +40,7 @@ public:
     }
 
     // 方法二：利用二分法的思想，将数据分为大于中值的一部分和小于中值的一部分，找出大于区间个数的部分。
-    // Time complexity O(nlogn)
+    // Time complexity O(nlogn)，其中：二分查找的时间复杂度为O(logn)；在整个数组中求出区间中有多少个数的时间复杂度为O(n)
     // Space complexity O(1)
     //统计数组中再这个区间范围内有多少个数组
     int countRange(vector<int> nums, int left, int right)
