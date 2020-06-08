@@ -35,6 +35,7 @@ public:
         }
         return -1;
     }
+
     // 方法二：需利用一个额外的hash_map存储
     // Time complexity O(n)
     // Space complexity O(n)
@@ -58,6 +59,7 @@ public:
         }
         return -1;
     }
+
     // 方法三：进一步，查询的时候两边同时查
     // Time complexity O(n)
     // Space complexity O(n)
@@ -116,6 +118,7 @@ public:
         }
         return -1;
     }
+
     // 方法五：最优解，思想是遍历这个数组过程中，判断这个数字（用m表示）是不是等于下标，
     //如果是就跳过，如果不是就拿m与第m哥数字进行比较，
     // 如果相等就找到了，如果不等，就将m与第m个数字进行交换。
