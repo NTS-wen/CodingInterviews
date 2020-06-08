@@ -19,7 +19,7 @@ public:
     // 方法一：排序后，按顺序直接查找，当碰到遍历的后一个数和当前的数相等时就返回
     // Time complexity O(nlogn)
     // Space complexity O(1)
-    int repeatNum4(vector<int> &nums)
+    int repeatNum1(vector<int> &nums)
     {
         if (nums.size() <= 1)
         {
@@ -38,7 +38,7 @@ public:
     // 方法二：需利用一个额外的hash_map存储
     // Time complexity O(n)
     // Space complexity O(n)
-    int repeatNum1(vector<int> &nums)
+    int repeatNum2(vector<int> &nums)
     {
         if (nums.size() <= 1)
         {
@@ -61,7 +61,7 @@ public:
     // 方法三：进一步，查询的时候两边同时查
     // Time complexity O(n)
     // Space complexity O(n)
-    int repeatNum2(vector<int> &nums)
+    int repeatNum3(vector<int> &nums)
     {
         int result = -1;
         if (nums.size() <= 1)
@@ -100,7 +100,7 @@ public:
     // 方法四：再利用一个数组作为Hash表
     // Time complexity O(n)
     // Space complexity O(n)
-    int repeatNum3(vector<int> &nums)
+    int repeatNum4(vector<int> &nums)
     {
         vector<int> cache(nums.size(), -1);
         for (size_t i = 0; i < nums.size(); i++)
