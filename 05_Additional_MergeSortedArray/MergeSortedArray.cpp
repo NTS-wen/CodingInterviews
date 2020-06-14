@@ -11,9 +11,8 @@ using namespace std;
 class Solution
 {
 public:
-    // 利用双指针，开始指针1指向数组A1的尾部，另一个指针2指向数组A2的尾部。
-    // 然后指针1从后往前扫描，如碰到一个空格，指针2处就往前添加0 2 %字符，
-    // 最后当指针1到达起始点、或者指针1和指针2指向同一个位置时，结束循环。
+    // 利用三指针，开始指针1指向数组A1的尾部，另一个指针2指向数组A2的尾部，第3个指针指向数组新数组的尾部。
+    // 从后往前对比A1和A2中每个元素，如果该数组中元素大，就放到新数组中最后面。
     // Time complexity O(n)
     // Space complexity O(1)
     static bool mergeSortedArray(vector<int> &array1, const vector<int> array2)
