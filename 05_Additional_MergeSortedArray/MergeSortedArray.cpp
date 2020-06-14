@@ -24,13 +24,20 @@ public:
         array1.resize(indexOfArrayNew + 1, 0);
         while (indexOfArray2 >= 0)
         {
-            if (array2[indexOfArray2] >= array1[indexOfArray1])
+            if (indexOfArray1 < 0)
             {
                 array1[indexOfArrayNew] = array2[indexOfArray2--];
             }
             else
             {
-                array1[indexOfArrayNew] = array1[indexOfArray1--];
+                if (array2[indexOfArray2] >= array1[indexOfArray1])
+                {
+                    array1[indexOfArrayNew] = array2[indexOfArray2--];
+                }
+                else
+                {
+                    array1[indexOfArrayNew] = array1[indexOfArray1--];
+                }
             }
             indexOfArrayNew--;
         }
@@ -39,8 +46,8 @@ public:
 };
 int main()
 {
-    vector<int> array1{1, 3, 5, 6, 11};
-    vector<int> array2{1, 2, 3, 7, 8, 10};
+    vector<int> array1{1};
+    vector<int> array2{};
     bool result = Solution::mergeSortedArray(array1, array2);
     return 0;
 }
